@@ -17,7 +17,11 @@
 <body>
 
     <noscript>
-        <style>#theme-toggle { display: none; }</style>
+        <style>
+            #theme-toggle {
+                display: none;
+            }
+        </style>
         <p>JavaScript is required for theme switching.</p>
     </noscript>
 
@@ -43,14 +47,29 @@
 
         </ul>
 
-        <aside>
-            <h4>View the DoorDash Project Here</h4>
-            <a href="https://github.com/Sherif-Elfiky/CSE151AProj" target="_blank"> <button class="button-padding">
-                    <img src="static/ddash.png" alt="Doordash Logo" width="90" height="50">
 
-                </button></a>
+        <div id="projects">
+            <project-card title="Doordash" image="doordash.jpg" description="Doordash ETA Prediction"
+                link="https://example.com/doordash">
+            </project-card>
 
-        </aside>
+            <project-card title="Pantry Pal" image="pantry-pal.jpg" description="Creating Recipes From Ingredients"
+                link="https://example.com/pantry-pal">
+            </project-card>
+
+            <project-card title="Waster" image="waster.jpg" description="Tracking Food Waste/Giving Shopping Recs"
+                link="https://example.com/waster">
+            </project-card>
+        </div>
+
+            <aside>
+                <h4>View the DoorDash Project Here</h4>
+                <a href="https://github.com/Sherif-Elfiky/CSE151AProj" target="_blank"> <button class="button-padding">
+                        <img src="static/ddash.png" alt="Doordash Logo" width="90" height="50">
+
+                    </button></a>
+
+            </aside>
 
     </section>
 
@@ -109,8 +128,9 @@
 
 
     </footer>
-
+    <script src ="projectcard.js"></script>
     <script src="themes.js"></script>
+   
 
 
 </body>
