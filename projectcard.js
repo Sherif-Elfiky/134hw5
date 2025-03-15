@@ -6,60 +6,58 @@ class projectcard extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
-                    display: block;
-                    border: 2px solid var(--secondary-color, #2E0854);
-                    padding: 20px;
-                    margin: 15px;
-                    border-radius: 12px;
-                    background-color: var(--primary-color, #D8BFD8);
-                    color: var(--text-color, #330066);
-                    text-align: center;
-                    max-width: 300px;
-                    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                    --mixed-border-color: color-mix(in srgb, var(--primary-color) 50%, var(--secondary-color) 50%);
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    border: 2px solid;
+                    border-color: --mixed-border-color;
+                    margin: 3em;
                     transition: transform 0.3s ease-in-out;
+                 
+                    
+                    
+                    
+                    
                 }
 
                 :host(:hover) {
                     transform: scale(1.05);
                 }
 
-                h2 {
-                    font-size: 1.5em;
-                    font-weight: bold;
-                    margin: 10px 0;
-                }
+                
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 5px;
-                    border: 2px solid var(--secondary-color, #2E0854);
-                    object-fit: cover;
-                }
+              
 
                 p {
-                    font-size: 1em;
-                    margin: 10px 0;
+                    margin: 3rem;
+                  
                     color: var(--text-color, #330066);
                 }
 
+                img {
+                    margin: auto;
+                    width: 90px;
+                    height: 50px;
+
+                }
+
                 a {
-                    display: inline-block;
-                    padding: 10px 15px;
-                    margin-top: 15px;
-                    background-color: var(--secondary-color, #2E0854);
+                   
+                    background-color: var(--primary-color, #2E0854);
                     color: white;
+                    border: 1px solid var(--secondary-color, #2E0854);
+                    margin: .5em;
                   
-                    border-radius: 12px;
-                    border: 2px solid var(--secondary-color, #2E0854);
-                    font-weight: bold;
                    
                 }
 
                 a:hover {
                     background-color: white;
-                    color: var(--secondary-color, #2E0854);
-                    border-color: var(--secondary-color, #2E0854);
+                    color: var(--secondary-color);
+                    border-color: var(--mixed-border-color);
+                   
+
                 }
 
                 @media (max-width: 600px) {
@@ -80,6 +78,8 @@ class projectcard extends HTMLElement {
             <p></p>
             <a target="_blank">Learn More</a>
         `;
+
+
     }
 
     connectedCallback() {
