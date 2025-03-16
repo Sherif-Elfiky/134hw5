@@ -37,6 +37,12 @@ body {
 }
 
 
+#summary, #classes-taken {
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+
 #content {
     display: flex;
     flex-direction: column;
@@ -218,12 +224,3 @@ textarea:valid, input:valid {
     background: none;
     border: none;
     font-size: 1.5rem;
-   
-    cursor: pointer;
-    display: none;
-}
-
-
-.js-enabled #theme-toggle {
-    display: block;
-}
