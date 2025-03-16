@@ -64,7 +64,6 @@ class projectcard extends HTMLElement {
 
             <h2></h2>
             <picture>
-                <!-- The <img> will be dynamically updated -->
             </picture>
             <p></p>
             <a target="_blank">Learn More</a>
@@ -84,22 +83,22 @@ class projectcard extends HTMLElement {
     }
 
     render() {
-        // Set the project title
+       
         this.shadowRoot.querySelector("h2").textContent = this.getAttribute("title") || "Project Name";
     
-        // Get the image source (expects PNG)
-        const imageSrc = this.getAttribute("picture") || "placeholder.png"; // default to placeholder if no image is provided
+       
+        const imageSrc = this.getAttribute("picture") || "placeholder.png"; 
         const pictureElement = this.shadowRoot.querySelector("picture");
     
-        // Create the <img> element for the picture tag to support PNG images
+       
         pictureElement.innerHTML = `
             <img src="${imageSrc}" alt="${this.getAttribute('title')}">
         `;
     
-        // Set the project description
+      
         this.shadowRoot.querySelector("p").textContent = this.getAttribute("description") || "No description available.";
     
-        // Set the link URL
+       
         this.shadowRoot.querySelector("a").href = this.getAttribute("link") || "#";
     }
     
