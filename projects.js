@@ -64,5 +64,45 @@ function loadLocalData() {
   
 
   document.getElementById("load-local").addEventListener("click", loadLocalData);
+  document.getElementById('load-remote').addEventListener('click', loadRemote);
 
+
+
+  function loadRemote() {
+    const url = 'https://my-json-server.typicode.com/Sherif-Elfiky/134hw5/projects'; 
+  
+    // Fetch data from the remote server
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // Clear any existing cards before loading new ones
+        document.getElementById('project-cards').innerHTML = '';
+        
+        // Loop through the fetched data and display each one
+        data.forEach(project => {
+          displayPost(project);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data from the server:', error);
+        alert('Failed to load data from the server.');
+      });
+  }
+  
+  // Display data in project cards
+  function displayPost(project) {
+    const container = document.getElementById('project-cards');
+    
+    // Create a new project card
+    const card = document.createElement('project-card');
+    
+    // Set attributes to populate the card
+    card.setAttribute('title', project.title);
+    card.setAttribute('description', project.description);
+    card.setAttribute('link', project.link);
+    card.setAttribute('picture', project.picture);
+    
+    // Append the card to the container
+    container.appendChild(card);
+  }
   
