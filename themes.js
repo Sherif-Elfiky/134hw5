@@ -23,3 +23,4 @@ themeToggle.addEventListener("click", () => {
     localStorage.setItem("theme", newTheme);
     updateThemeIcon();
 });
+
