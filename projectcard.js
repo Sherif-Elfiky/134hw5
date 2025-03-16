@@ -20,10 +20,7 @@ class projectcard extends HTMLElement {
                     transform: scale(1.05);
                 }
 
-                picture {
-                    display: flex;
-                    justify-content: center;
-                }
+              
 
                 p {
                     margin: 3rem;
@@ -41,6 +38,7 @@ class projectcard extends HTMLElement {
                     color: white;
                     border: 1px solid var(--secondary-color, #2E0854);
                     margin: .5em;
+                    padding: 1em;
                 }
 
                 a:hover {
