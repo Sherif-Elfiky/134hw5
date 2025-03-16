@@ -2,7 +2,7 @@ const projects = [
     {
         title: "DoorDash",
         picture: "static/ddash.png",
-        description: "Doordash ETA Prediction based on features such as type of cuisine, number of orders, number of drivers and more. Learn more about thisproject at the link below.",
+        description: "Doordash ETA Prediction based on features such as type of cuisine, number of orders, number of drivers and more. Learn more about this project at the link below.",
         link: "https://github.com/Sherif-Elfiky/CSE151AProj"
 
       },
@@ -64,3 +64,5 @@ function loadLocalData() {
   
 
   document.getElementById("load-local").addEventListener("click", loadLocalData);
+
+  
