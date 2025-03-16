@@ -33,35 +33,34 @@ const projects = [
 
 ];
 
+localStorage.setItem("projects", JSON.stringify(projects));
 
 function loadLocalData() {
     const storedProjects = localStorage.getItem("projects");
-    
-    // Check if data exists in localStorage
+
     if (storedProjects) {
-      const projects = JSON.parse(storedProjects); // Convert string back to array
-  
-      // Clear existing cards in case there's any old data
-      const cardContainer = document.getElementById("project-cards");
-      cardContainer.innerHTML = ""; // Clear previous cards
-      
-      // Create and append new cards from localStorage
-      projects.forEach(project => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-  
-        card.innerHTML = `
-          <img src="${project.picture}" alt="${project.title}">
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-          <a href="${project.link}" target="_blank">Learn more</a>
-        `;
-        cardContainer.appendChild(card);
-      });
+        const projects = JSON.parse(storedProjects);
+
+        const cardContainer = document.getElementById("project-cards");
+        cardContainer.innerHTML = "";  
+
+        projects.forEach(project => {
+            const card = document.createElement("project-card");
+
+           
+            card.setAttribute("title", project.title);
+            card.setAttribute("description", project.description);
+            card.setAttribute("link", project.link);
+            card.setAttribute("picture", project.picture);
+
+          
+            cardContainer.appendChild(card);
+        });
     } else {
-      console.log("No projects found in localStorage.");
+        console.log("No projects found in localStorage.");
     }
-  }
+}
+
   
-  // Attach event listener to "Load Local" button
+
   document.getElementById("load-local").addEventListener("click", loadLocalData);
