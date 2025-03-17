@@ -97,8 +97,8 @@ button.button-padding:hover {
 
 
 #Portfolio_Pic img {
-    width: 40vh; 
-    height: 40vh; 
+    width: 30vh; 
+    height: 30vh; 
     border-radius: 50%;
     border: 10px solid white; 
     object-fit: cover; 
