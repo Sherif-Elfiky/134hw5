@@ -43,6 +43,7 @@ body {
 }
 
 
+
 #content {
     display: flex;
     flex-direction: column;
@@ -96,8 +97,8 @@ button.button-padding:hover {
 
 
 #Portfolio_Pic img {
-    width: 17vh; 
-    height: 17vh; 
+    width: 40vh; 
+    height: 40vh; 
     border-radius: 50%;
     border: 10px solid white; 
     object-fit: cover; 
@@ -224,3 +225,12 @@ textarea:valid, input:valid {
     background: none;
     border: none;
     font-size: 1.5rem;
+   
+    cursor: pointer;
+    display: none;
+}
+
+
+.js-enabled #theme-toggle {
+    display: block;
+}

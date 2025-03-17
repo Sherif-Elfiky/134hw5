@@ -4,4 +4,5 @@ I also made emails in contact section clickable so that they actually link to an
 I added better magins to my p tags to improve readability and aesthetics.
 I added my resume to my first page and made sure its downloadable.
 Then I added h3 tag above load local and load remote.
+Then I updated the size of my portfolio pic using viewport units to make it more viewable.
 
